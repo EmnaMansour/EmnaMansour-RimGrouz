@@ -1,0 +1,13 @@
+
+<div class="container">
+    <div class="row">
+ <div class="col-md-4" *ngFor="let prod of produits" >
+    <div class="item">
+     <h4>{{prod.nom}}</h4>
+        <p class="text-primary"  >prix: {{prod.prix}}</p><img [src]="prod.image" alt="camera" class="img-fluid">
+        <div class="overlay d-flex align-items-center justify-content-center"><a  class="btn btn-unique" data-abc="true" *ngIf="prod.description" (click)="onDetail(prod.description)" > Description</a></div>
+    </div>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>
